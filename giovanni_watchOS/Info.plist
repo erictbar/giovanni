@@ -30,7 +30,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.coreyc.giovanni</string>
+	<string>com.EricBarbosa.giovanni</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
