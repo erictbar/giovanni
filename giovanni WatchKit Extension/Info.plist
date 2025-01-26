@@ -44,5 +44,25 @@
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>AppGroupIdentifier</key>
+	<string>group.com.EricBarbosa.giovanni</string>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.EricBarbosa.giovanni</string>
+	</array>
 </dict>
 </plist>
+
+extension FileManager {
+    var sharedContainerURL: URL? {
+        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.EricBarbosa.giovanni")
+    }
+    
+    var documentsDirectory: URL? {
+        return sharedContainerURL?.appendingPathComponent("Documents")
+    }
+}

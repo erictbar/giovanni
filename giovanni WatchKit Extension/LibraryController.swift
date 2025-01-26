@@ -131,7 +131,7 @@ class LibraryController: WKInterfaceController {
 			if noGamesFound {
 				info.refreshHandler = reloadGames
 				info.refreshButton.setHidden(false)
-				info.titleLabel.setText("Add games to your phone’s Documents folder from iTunes or from Safari on your phone")
+				info.titleLabel.setText("Add games to the 'Giovanni' folder in the Files app on your iPhone")
 			} else {
 				info.titleLabel.setText("Looking for games...")
 				info.refreshButton.setHidden(true)

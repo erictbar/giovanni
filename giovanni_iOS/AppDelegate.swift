@@ -39,10 +39,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
-		return true
-	}
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Create app directory in Files
+    if let groupURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.EricBarbosa.giovanni") {
+        let gamesDirectory = groupURL.appendingPathComponent("Games", isDirectory: true)
+        try? FileManager.default.createDirectory(at: gamesDirectory, withIntermediateDirectories: true, attributes: nil)
+        
+        // Create placeholder file if it doesn't exist
+        let placeholderFile = gamesDirectory.appendingPathComponent("add_roms_here.txt")
+        if !FileManager.default.fileExists(atPath: placeholderFile.path) {
+            let text = "Add your Game Boy ROM files to this folder"
+            try? text.write(to: placeholderFile, atomically: true, encoding: .utf8)
+        }
+    }
+    return true
+}
 
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 		
