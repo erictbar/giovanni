@@ -59,18 +59,26 @@ extension FileManager {
 	}
 	
 	var sharedDirectory: URL? {
-    	// Use the shared Documents directory in Files app
-    	return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.yourbundleid.giovanni")
+        // Use the app's Documents directory instead of shared container
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
 	}
 
-	var documentsDirectory: URL? {
- 		if let shared = sharedDirectory {
-        	let gamesDirectory = shared.appendingPathComponent("Games", isDirectory: true)
-        	try? FileManager.default.createDirectory(at: gamesDirectory, withIntermediateDirectories: true)
-        	return gamesDirectory
+    var documentsDirectory: URL? {
+        guard let shared = sharedDirectory else {
+            return nil
+        }
+        var gamesDirectory = shared.appendingPathComponent("Games", isDirectory: true)
+        do {
+            try FileManager.default.createDirectory(at: gamesDirectory, withIntermediateDirectories: true)
+            // Add .nosync to prevent iCloud backup if needed
+            var resourceValues = URLResourceValues()
+            resourceValues.isExcludedFromBackup = true
+            try gamesDirectory.setResourceValues(resourceValues)
+        } catch {
+            print("Error creating directory: \(error)")
+        }
+        return gamesDirectory
     }
-    return nil
-	}
 	
 	func receiveFile(at fileURL: URL, completion: ((String) -> Bool), failure: ((Error) -> Bool)) -> Bool {
 		

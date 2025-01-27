@@ -255,8 +255,6 @@
 		04C4D3E02889D519003A35A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04C4D3E22889D5A9003A35A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C4D3E42889D5B4003A35A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		07E8E5E82D46F66B00027969 /* giovanni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = giovanni.entitlements; sourceTree = "<group>"; };
-		07E8E5E92D46F6AD00027969 /* giovanni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = giovanni.entitlements; sourceTree = "<group>"; };
 		B21D7CE71E6C515900002F89 /* Gambatte_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gambatte_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21D7CE91E6C515900002F89 /* gambatte_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gambatte_watchOS.h; sourceTree = "<group>"; };
 		B21D7CEA1E6C515900002F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -420,6 +418,7 @@
 		B2FC9BDD1E608AD5004D19C0 /* GameplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayController.swift; sourceTree = "<group>"; };
 		B2FCD4561E813EE900718BCF /* FileManagerAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerAdditions.swift; sourceTree = "<group>"; };
 		D0EEF5E51F7BE2D5002A5F32 /* ComplicationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationDataSource.swift; sourceTree = "<group>"; };
+		D0EEF5EE1F7BF67F002A5F32 /* gallery.ckcomplication */ = {isa = PBXFileReference; lastKnownFileType = folder; name = gallery.ckcomplication; path = ../../Desktop/gallery.ckcomplication; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -751,8 +750,8 @@
 		B2DC84FC1E5DC6CB00CC1028 /* giovanni_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				07E8E5E82D46F66B00027969 /* giovanni.entitlements */,
 				04C4D3992889D46F003A35A7 /* Assets.xcassets */,
+				D0EEF5EE1F7BF67F002A5F32 /* gallery.ckcomplication */,
 				B2DC84FD1E5DC6CB00CC1028 /* AppDelegate.swift */,
 				B2DC84FF1E5DC6CB00CC1028 /* ViewController.swift */,
 				B2FCD4561E813EE900718BCF /* FileManagerAdditions.swift */,
@@ -766,7 +765,6 @@
 		B2DC85101E5DC6CC00CC1028 /* giovanni_watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				07E8E5E92D46F6AD00027969 /* giovanni.entitlements */,
 				04C4D3E22889D5A9003A35A7 /* Assets.xcassets */,
 				B2DC85111E5DC6CC00CC1028 /* Interface.storyboard */,
 				B2DC85161E5DC6CC00CC1028 /* Info.plist */,
@@ -1214,7 +1212,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.EricBarbosa.gambatte-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericbarbosa.app.gambatte-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1247,7 +1245,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.EricBarbosa.gambatte-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericbarbosa.app.gambatte-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1401,7 +1399,7 @@
 					"$(PROJECT_DIR)/Gambatte/libgambatte",
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EricBarbosa.giovanni.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericbarbosa.app.giovanni.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1428,7 +1426,7 @@
 					"$(PROJECT_DIR)/Gambatte/libgambatte",
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EricBarbosa.giovanni.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericbarbosa.app.giovanni.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1452,7 +1450,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EricBarbosa.giovanni.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericbarbosa.app.giovanni.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1476,7 +1474,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EricBarbosa.giovanni.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericbarbosa.app.giovanni.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1497,7 +1495,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EricBarbosa.giovanni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericbarbosa.app.giovanni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
@@ -1515,7 +1513,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.EricBarbosa.giovanni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericbarbosa.app.giovanni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};

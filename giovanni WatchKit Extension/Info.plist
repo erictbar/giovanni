@@ -37,7 +37,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>com.EricBarbosa.giovanni.watchkitapp</string>
+			<string>com.ericbarbosa.app.giovanni.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
@@ -49,17 +49,17 @@
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>AppGroupIdentifier</key>
-	<string>group.com.EricBarbosa.giovanni</string>
+	<string>group.com.ericbarbosa.app.giovanni</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.EricBarbosa.giovanni</string>
+		<string>group.com.ericbarbosa.app.giovanni</string>
 	</array>
 </dict>
 </plist>
 
 extension FileManager {
     var sharedContainerURL: URL? {
-        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.EricBarbosa.giovanni")
+        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.ericbarbosa.app.giovanni")
     }
     
     var documentsDirectory: URL? {

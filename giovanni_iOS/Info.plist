@@ -68,13 +68,13 @@
             <string>Owner</string>
             <key>LSItemContentTypes</key>
             <array>
-                <string>com.EricBarbosa.giovanni.rom</string>
+                <string>com.ericbarbosa.app.giovanni.rom</string>
             </array>
         </dict>
     </array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.EricBarbosa.giovanni</string>
+		<string>group.com.ericbarbosa.app.giovanni</string>
 	</array>
 </dict>
 </plist>

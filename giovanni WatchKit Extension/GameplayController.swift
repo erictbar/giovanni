@@ -49,7 +49,7 @@ class GameplayController: WKInterfaceController {
 	let deadzone: CGFloat = 1
     
     private var queue: DispatchQueue {
-        return DispatchQueue(label: "com.EricBarbosa.giovanni")
+        return DispatchQueue(label: "com.ericbarbosa.app.giovanni")
     }
     @IBAction func tapUpdated(_ sender: WKLongPressGestureRecognizer) {
         pressInputOnce(.start)
